@@ -1,0 +1,265 @@
+@nav-bg: #fff;
+@nav-txt: #000;
+@accent-color: #fbef00;
+
+body {
+    // background-color: #dedede;
+    // font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* STRUCTURE */
+
+.main-container {
+    margin-top: 5rem;
+    margin: 5rem 0 2rem 0;
+    text-align: center;
+}
+
+.major-section {
+    margin-bottom: 5rem;
+}
+
+.portfolio-links-container {
+    margin-bottom: 3rem;
+}
+
+/* This class is used to remove the bottom margin from whichever container its applied to to preserve spacing between containers */
+.last-container {
+    margin-bottom: 0;
+}
+
+/* NAVIGATION */
+
+.nav {
+    background-color: @nav-bg;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.nav-wrapper {
+    // margin: 0 auto;
+    // max-width: 60rem;
+}
+
+.nav ul {
+    background-color: @nav-bg;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+        background-color: #dedede;
+    }
+    &:visited {
+        color: @nav-txt;
+    }
+}
+
+/* FOR ACTIVE CLASSES */
+.nav-link-active {
+    border-bottom: 2px solid @accent-color;
+    margin: 75px 15px 0 15px;
+    padding: 0 0 5px 0;
+}
+
+.logo {
+    display: block;
+    float: left;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.nav-menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    // user-select: none;
+}
+
+.navicon {
+    background: @nav-txt;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+    &:before,
+    &:after {
+        background: @nav-txt;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    &:before {
+        top: 5px;
+    }
+    &:after {
+        top: -5px;
+    }
+}
+
+.menu-btn {
+    display: none;
+    &:checked ~ .nav-menu {
+        max-height: 240px;
+    }
+    &:checked ~ .menu-icon .navicon {
+        background: transparent;
+        &:before {
+            transform: rotate(-45deg);
+        }
+        &:after {
+            transform: rotate(45deg);
+        }
+    }
+    &:checked ~ .menu-icon .navicon {
+        &:before,
+        &:after {
+            top: 0;
+        }
+    }
+}
+
+/* HEADINGS */
+
+.section-heading,
+.section-subheading {
+    text-transform: uppercase;
+}
+
+/* TYPOGRAPHY */
+
+.section-text {
+    line-height: 1.4;
+    margin: 1rem 0.5rem;
+    text-align: justify;
+}
+
+/* BUTTONS */
+
+.btn {
+    background-color: @accent-color;
+    border: 0;
+    padding: 1rem;
+    width: 7rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* MEDIA */
+
+.tw-desktop-logo,
+.tw-mobile-logo {
+    float: left;
+}
+
+.tw-desktop-logo {
+    display: none;
+}
+
+.tw-mobile-logo {
+    display: block;
+    padding: 9px;
+    width: 3rem;
+}
+
+.tw-portrait,
+.portfolio-thumbnail {
+    width: 100%;
+}
+
+/* RESPONSIVENESS */
+
+// 35rem
+@media only screen and (min-width: 1081px) {
+    /*
+    .half-width {
+        float: left;
+        width: 50%;
+    }
+    */
+
+    .nav {
+        background: none;
+    }
+
+    .nav ul {
+        background: none;
+    }
+
+    .nav-item {
+        float: left;
+    }
+
+    .nav-link {
+        // padding: 75px 15px;
+        border-bottom: 2px solid @accent-color;
+        margin: 75px 15px 0 15px;
+        padding: 0 0 5px 0;
+    }
+
+    .nav-menu {
+        clear: none;
+        // float: right;
+        float: left;
+        max-height: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .tw-desktop-logo {
+        display: block;
+        padding: 20px;
+        width: 8rem;
+    }
+
+    .tw-mobile-logo {
+        display: none;
+    }
+}
+
+// 1307
+@media only screen and (min-width: 1081px) {
+    .main-container {
+        // width: 40rem;
+        // margin: 11rem auto 0 auto
+        // float: right;
+        // margin: 9rem 0 2rem 0;
+        margin: 9rem 0 2rem 43.6%;
+        width: 40rem;
+        // width: 51.2rem;
+    }
+}
+
+@media only screen and (min-width: 1581px) {
+    .main-container {
+        float: none;
+        margin: 11rem auto 2rem auto;
+        width: 40rem;
+    }
+}

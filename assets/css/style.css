@@ -1,0 +1,204 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+/* STRUCTURE */
+.main-container {
+  margin-top: 5rem;
+  margin: 5rem 0 2rem 0;
+  text-align: center;
+}
+.major-section {
+  margin-bottom: 5rem;
+}
+.portfolio-links-container {
+  margin-bottom: 3rem;
+}
+/* This class is used to remove the bottom margin from whichever container its applied to to preserve spacing between containers */
+.last-container {
+  margin-bottom: 0;
+}
+/* NAVIGATION */
+.nav {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.nav ul {
+  background-color: #fff;
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.nav-link {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-link:hover {
+  background-color: #dedede;
+}
+.nav-link:visited {
+  color: #000;
+}
+/* FOR ACTIVE CLASSES */
+.nav-link-active {
+  border-bottom: 2px solid #fbef00;
+  margin: 75px 15px 0 15px;
+  padding: 0 0 5px 0;
+}
+.logo {
+  display: block;
+  float: left;
+  padding: 20px;
+  text-decoration: none;
+}
+.nav-menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+}
+.navicon {
+  background: #000;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+.navicon:before,
+.navicon:after {
+  background: #000;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.navicon:before {
+  top: 5px;
+}
+.navicon:after {
+  top: -5px;
+}
+.menu-btn {
+  display: none;
+}
+.menu-btn:checked ~ .nav-menu {
+  max-height: 240px;
+}
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+.menu-btn:checked ~ .menu-icon .navicon:before,
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  top: 0;
+}
+/* HEADINGS */
+.section-heading,
+.section-subheading {
+  text-transform: uppercase;
+}
+/* TYPOGRAPHY */
+.section-text {
+  line-height: 1.4;
+  margin: 1rem 0.5rem;
+  text-align: justify;
+}
+/* BUTTONS */
+.btn {
+  background-color: #fbef00;
+  border: 0;
+  padding: 1rem;
+  width: 7rem;
+}
+.btn:hover {
+  cursor: pointer;
+}
+/* MEDIA */
+.tw-desktop-logo,
+.tw-mobile-logo {
+  float: left;
+}
+.tw-desktop-logo {
+  display: none;
+}
+.tw-mobile-logo {
+  display: block;
+  padding: 9px;
+  width: 3rem;
+}
+.tw-portrait,
+.portfolio-thumbnail {
+  width: 100%;
+}
+/* RESPONSIVENESS */
+@media only screen and (min-width: 1081px) {
+  /*
+    .half-width {
+        float: left;
+        width: 50%;
+    }
+    */
+  .nav {
+    background: none;
+  }
+  .nav ul {
+    background: none;
+  }
+  .nav-item {
+    float: left;
+  }
+  .nav-link {
+    border-bottom: 2px solid #fbef00;
+    margin: 75px 15px 0 15px;
+    padding: 0 0 5px 0;
+  }
+  .nav-menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .tw-desktop-logo {
+    display: block;
+    padding: 20px;
+    width: 8rem;
+  }
+  .tw-mobile-logo {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1081px) {
+  .main-container {
+    margin: 9rem 0 2rem 43.6%;
+    width: 40rem;
+  }
+}
+@media only screen and (min-width: 1581px) {
+  .main-container {
+    float: none;
+    margin: 11rem auto 2rem auto;
+    width: 40rem;
+  }
+}
