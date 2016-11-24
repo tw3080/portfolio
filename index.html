@@ -7,21 +7,94 @@
     <title>Taylor Welling</title>
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css" />
+    <!--
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
-    <link rel="stylesheet" href="css/style.css" />
+-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
     <nav class="nav">
-        <a href="#" class="logo">TW</a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="nav-menu">
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        </ul>
+        <div class="nav-wrapper">
+            <!-- <a href="#" class="logo">TW</a> -->
+            <a href="#"><img class="tw-desktop-logo" src="./assets/img/bw-logo.png" /></a>
+            <a href="#"><img class="tw-mobile-logo" src="./assets/img/tw-mobile-logo.png" /></a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
     </nav>
+    <div class="main-container">
+        <section class="major-section">
+            <h1 class="section-heading">About</h1>
+            <div class="half-width">
+                <p class="section-text">
+                    Hi! I’m Taylor, and I’m a web designer and front-end developer based in the Seattle, WA area. I think design and development are equally important in creating excellent user experiences, and I’m passionate about combining my skills in both areas by delivering content which is aesthetically pleasing, functional, and cleanly coded.
+                </p>
+                <h2 class="section-subheading">Skills</h2>
+                <p class="section-text">
+                    Hi! I’m Taylor, and I’m a web designer and front-end developer based in the Seattle, WA area. I think design and development are equally important in creating excellent user experiences, and I’m passionate about combining my skills in both areas by delivering content which is aesthetically pleasing, functional, and cleanly coded.
+                </p>
+            </div>
+            <div class="half-width">
+                <img class="tw-portrait" src="./assets/img/tw-portrait.jpg" />
+            </div>
+        </section>
+        <section class="major-section">
+            <h1 class="section-heading">Portfolio</h1>
+            <section>
+                <img class="portfolio-thumbnail" src="./assets/img/poke-mongo-screenshot.png" />
+                <h2 class="section-subheading">Poké Mongo</h2>
+                <p class="section-text">
+                    A full-stack app which allows users to view and manage their Pokémon card collections online. Developed using AngularJS, Node.js, MongoDB, and Express.
+                    <div class="portfolio-links-container">
+                        <a href="https://still-plateau-94668.herokuapp.com/#/"><button class="btn">Live</button></a>
+                        <a href="https://github.com/tw3080/poke-mongo"><button class="btn">GitHub</button></a>
+                    </div>
+                </p>
+            </section>
+            <section>
+                <img class="portfolio-thumbnail" src="./assets/img/weather-mood-screenshot.png" />
+                <h2 class="section-subheading">Weather Mood</h2>
+                <p class="section-text">
+                    Weather app with changing styles and relaxing white noise sounds based on weather conditions. Developed with AngularJS.
+                    <div class="portfolio-links-container">
+                        <a href="https://tw3080.github.io/weather-mood/app/#/"><button class="btn">Live</button></a>
+                        <a href="https://github.com/tw3080/weather-mood"><button class="btn">GitHub</button></a>
+                    </div>
+                </p>
+            </section>
+            <section>
+                <img class="portfolio-thumbnail" src="./assets/img/mappr-screenshot.png" />
+                <h2 class="section-subheading">Mappr</h2>
+                <p class="section-text">
+                    Integrates the Google Maps API and Flickr API to generate a gallery and map of Flickr photos based on location. Developed with jQuery.
+                    <div class="portfolio-links-container">
+                        <a href="https://tw3080.github.io/mappr/"><button class="btn">Live</button></a>
+                        <a href="https://github.com/tw3080/mappr"><button class="btn">GitHub</button></a>
+                    </div>
+                </p>
+            </section>
+        </section>
+        <section class="major-section last-container">
+            <h1 class="section-heading">Contact</h1>
+            <p class="section-text">
+                I'd love the opportunity to create something with you! If you're interested in working together or seeing my resume, please feel free to reach out to me through social media or email:
+            </p>
+            <div class="contact-links-container">
+                <a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+            </div>
+            <div class="contact-links-container">
+                tayrwelling [at] gmail [dot] com
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
