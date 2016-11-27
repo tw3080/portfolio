@@ -1,6 +1,7 @@
 @nav-bg: #fff;
 @nav-txt: #000;
-@accent-color: #fbef00;
+@accent-color: #fbdb00;
+
 
 body {
     // background-color: #dedede;
@@ -17,15 +18,23 @@ body {
 }
 
 .major-section {
+    border-bottom: 1px solid #e0e0e0;
     margin-bottom: 5rem;
+    padding-bottom: 5rem;
 }
 
 .portfolio-links-container {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 /* This class is used to remove the bottom margin from whichever container its applied to to preserve spacing between containers */
-.last-container {
+.no-border-bottom {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+// Removes the bottom margin from a container to preserve spacing (this is used in the last div containing the live/github links to a project)
+.no-margin-bottom {
     margin-bottom: 0;
 }
 
@@ -69,7 +78,7 @@ body {
 
 /* FOR ACTIVE CLASSES */
 .nav-link-active {
-    border-bottom: 2px solid @accent-color;
+    border-bottom: 1px solid @accent-color;
     margin: 75px 15px 0 15px;
     padding: 0 0 5px 0;
 }
@@ -146,8 +155,22 @@ body {
 /* HEADINGS */
 
 .section-heading,
-.section-subheading {
+.section-subheading,
+.section-sub-subheading {
     text-transform: uppercase;
+}
+
+.section-heading {
+    margin: 5rem 0 1rem 0;
+}
+
+.section-subheading {
+    margin-top: 2.5rem;
+}
+
+.section-sub-subheading {
+    // font-size: 1rem;
+    margin-top: 1.5rem;
 }
 
 /* TYPOGRAPHY */
@@ -195,6 +218,17 @@ body {
     width: 100%;
 }
 
+.skill-icon-container {
+    display: inline-block;
+    text-align: center;
+}
+
+.skill-icon {
+    display: block;
+    font-size: 5rem;
+    padding: 0.5rem;
+}
+
 /* RESPONSIVENESS */
 
 @media only screen and (min-width: 600px) {
@@ -219,10 +253,17 @@ body {
 
     .nav-link {
         // padding: 75px 15px;
-        border-bottom: 2px solid @accent-color;
+        border-bottom: 1px solid @accent-color;
         margin: 20px 15px 0 15px;
         padding: 0 0 5px 0;
     }
+
+    /*
+    .major-section {
+        padding-bottom: 5rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    */
 }
 
 // 35rem
@@ -252,7 +293,7 @@ body {
 
     .nav-link {
         // padding: 75px 15px;
-        border-bottom: 2px solid @accent-color;
+        // border-bottom: 1px solid @accent-color;
         margin: 75px 15px 0 15px;
         padding: 0 0 5px 0;
     }
@@ -278,19 +319,18 @@ body {
         display: none;
     }
 
+    /*
     .section-heading {
         margin: 5rem 0 1rem 0;
     }
+    */
 
+    /*
     .major-section {
         padding-bottom: 5rem;
-        border-bottom: 2px solid black;
+        border-bottom: 1px solid #e0e0e0;
     }
-
-    .no-border-bottom {
-        border-bottom: 0;
-        padding-bottom: 0;
-    }
+    */
 }
 
 @media only screen and (min-width: 1581px) {

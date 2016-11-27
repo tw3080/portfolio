@@ -8,13 +8,19 @@ body {
   text-align: center;
 }
 .major-section {
+  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 .portfolio-links-container {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 /* This class is used to remove the bottom margin from whichever container its applied to to preserve spacing between containers */
-.last-container {
+.no-border-bottom {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.no-margin-bottom {
   margin-bottom: 0;
 }
 /* NAVIGATION */
@@ -48,7 +54,7 @@ body {
 }
 /* FOR ACTIVE CLASSES */
 .nav-link-active {
-  border-bottom: 2px solid #fbef00;
+  border-bottom: 1px solid #fbdb00;
   margin: 75px 15px 0 15px;
   padding: 0 0 5px 0;
 }
@@ -115,8 +121,18 @@ body {
 }
 /* HEADINGS */
 .section-heading,
-.section-subheading {
+.section-subheading,
+.section-sub-subheading {
   text-transform: uppercase;
+}
+.section-heading {
+  margin: 5rem 0 1rem 0;
+}
+.section-subheading {
+  margin-top: 2.5rem;
+}
+.section-sub-subheading {
+  margin-top: 1.5rem;
 }
 /* TYPOGRAPHY */
 .section-text {
@@ -126,7 +142,7 @@ body {
 }
 /* BUTTONS */
 .btn {
-  background-color: #fbef00;
+  background-color: #fbdb00;
   border: 0;
   padding: 1rem;
   width: 7rem;
@@ -154,6 +170,15 @@ body {
 .portfolio-thumbnail {
   width: 100%;
 }
+.skill-icon-container {
+  display: inline-block;
+  text-align: center;
+}
+.skill-icon {
+  display: block;
+  font-size: 5rem;
+  padding: 0.5rem;
+}
 /* RESPONSIVENESS */
 @media only screen and (min-width: 600px) {
   .nav-item {
@@ -172,10 +197,16 @@ body {
     width: 40rem;
   }
   .nav-link {
-    border-bottom: 2px solid #fbef00;
+    border-bottom: 1px solid #fbdb00;
     margin: 20px 15px 0 15px;
     padding: 0 0 5px 0;
   }
+  /*
+    .major-section {
+        padding-bottom: 5rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    */
 }
 @media only screen and (min-width: 1081px) {
   .main-container {
@@ -188,7 +219,6 @@ body {
     background: none;
   }
   .nav-link {
-    border-bottom: 2px solid #fbef00;
     margin: 75px 15px 0 15px;
     padding: 0 0 5px 0;
   }
@@ -206,17 +236,17 @@ body {
   .tw-mobile-logo {
     display: none;
   }
-  .section-heading {
-    margin: 5rem 0 1rem 0;
-  }
-  .major-section {
-    padding-bottom: 5rem;
-    border-bottom: 2px solid black;
-  }
-  .no-border-bottom {
-    border-bottom: 0;
-    padding-bottom: 0;
-  }
+  /*
+    .section-heading {
+        margin: 5rem 0 1rem 0;
+    }
+    */
+  /*
+    .major-section {
+        padding-bottom: 5rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    */
 }
 @media only screen and (min-width: 1581px) {
   .main-container {
