@@ -53,6 +53,7 @@ body {
 }
 
 .nav-link {
+    color: @nav-txt;
     display: block;
     padding: 20px;
     text-align: center;
@@ -181,9 +182,12 @@ body {
 }
 
 .tw-mobile-logo {
+    color: @nav-txt;
     display: block;
-    padding: 9px;
-    width: 3rem;
+    float: left;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .tw-portrait,
@@ -193,14 +197,46 @@ body {
 
 /* RESPONSIVENESS */
 
+@media only screen and (min-width: 600px) {
+    .nav-item {
+        float: left;
+    }
+
+    .nav-menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .main-container {
+        margin: 5rem auto 2rem auto;
+        width: 40rem;
+    }
+
+    .nav-link {
+        // padding: 75px 15px;
+        border-bottom: 2px solid @accent-color;
+        margin: 20px 15px 0 15px;
+        padding: 0 0 5px 0;
+    }
+}
+
 // 35rem
 @media only screen and (min-width: 1081px) {
-    /*
-    .half-width {
-        float: left;
-        width: 50%;
+    .main-container {
+        // width: 40rem;
+        // margin: 11rem auto 0 auto
+        // float: right;
+        // margin: 9rem 0 2rem 0;
+        // 11rem
+        margin: 6rem 0 2rem 43.6%;
+        // width: 40rem;
+        // width: 51.2rem;
     }
-    */
 
     .nav {
         background: none;
@@ -211,7 +247,7 @@ body {
     }
 
     .nav-item {
-        float: left;
+      //  float: left;
     }
 
     .nav-link {
@@ -222,10 +258,10 @@ body {
     }
 
     .nav-menu {
-        clear: none;
+      //  clear: none;
         // float: right;
         float: left;
-        max-height: none;
+        //max-height: none;
     }
 
     .menu-icon {
@@ -241,25 +277,27 @@ body {
     .tw-mobile-logo {
         display: none;
     }
-}
 
-// 1307
-@media only screen and (min-width: 1081px) {
-    .main-container {
-        // width: 40rem;
-        // margin: 11rem auto 0 auto
-        // float: right;
-        // margin: 9rem 0 2rem 0;
-        margin: 9rem 0 2rem 43.6%;
-        width: 40rem;
-        // width: 51.2rem;
+    .section-heading {
+        margin: 5rem 0 1rem 0;
+    }
+
+    .major-section {
+        padding-bottom: 5rem;
+        border-bottom: 2px solid black;
+    }
+
+    .no-border-bottom {
+        border-bottom: 0;
+        padding-bottom: 0;
     }
 }
 
 @media only screen and (min-width: 1581px) {
     .main-container {
         float: none;
-        margin: 11rem auto 2rem auto;
+        // 11rem
+        margin: 6rem auto 2rem auto;
         width: 40rem;
     }
 }

@@ -33,6 +33,7 @@ body {
   padding: 0;
 }
 .nav-link {
+  color: #000;
   display: block;
   padding: 20px;
   text-align: center;
@@ -142,30 +143,49 @@ body {
   display: none;
 }
 .tw-mobile-logo {
+  color: #000;
   display: block;
-  padding: 9px;
-  width: 3rem;
+  float: left;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 .tw-portrait,
 .portfolio-thumbnail {
   width: 100%;
 }
 /* RESPONSIVENESS */
+@media only screen and (min-width: 600px) {
+  .nav-item {
+    float: left;
+  }
+  .nav-menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .main-container {
+    margin: 5rem auto 2rem auto;
+    width: 40rem;
+  }
+  .nav-link {
+    border-bottom: 2px solid #fbef00;
+    margin: 20px 15px 0 15px;
+    padding: 0 0 5px 0;
+  }
+}
 @media only screen and (min-width: 1081px) {
-  /*
-    .half-width {
-        float: left;
-        width: 50%;
-    }
-    */
+  .main-container {
+    margin: 6rem 0 2rem 43.6%;
+  }
   .nav {
     background: none;
   }
   .nav ul {
     background: none;
-  }
-  .nav-item {
-    float: left;
   }
   .nav-link {
     border-bottom: 2px solid #fbef00;
@@ -173,9 +193,7 @@ body {
     padding: 0 0 5px 0;
   }
   .nav-menu {
-    clear: none;
     float: left;
-    max-height: none;
   }
   .menu-icon {
     display: none;
@@ -188,17 +206,22 @@ body {
   .tw-mobile-logo {
     display: none;
   }
-}
-@media only screen and (min-width: 1081px) {
-  .main-container {
-    margin: 9rem 0 2rem 43.6%;
-    width: 40rem;
+  .section-heading {
+    margin: 5rem 0 1rem 0;
+  }
+  .major-section {
+    padding-bottom: 5rem;
+    border-bottom: 2px solid black;
+  }
+  .no-border-bottom {
+    border-bottom: 0;
+    padding-bottom: 0;
   }
 }
 @media only screen and (min-width: 1581px) {
   .main-container {
     float: none;
-    margin: 11rem auto 2rem auto;
+    margin: 6rem auto 2rem auto;
     width: 40rem;
   }
 }
