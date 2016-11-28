@@ -1,39 +1,39 @@
 @nav-bg: #fff;
 @nav-txt: #000;
-@accent-color: #fbdb00;
-
+@accent-color: #86AE9A;
 
 body {
-    // background-color: #dedede;
-    // font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
 }
 
 /* STRUCTURE */
 
 .main-container {
-    margin-top: 5rem;
     margin: 5rem 0 2rem 0;
     text-align: center;
 }
 
 .major-section {
     border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 5rem;
-    padding-bottom: 5rem;
+    margin-bottom: 3.5rem;
+    padding-bottom: 3rem;
 }
 
 .portfolio-links-container {
     margin-bottom: 2.5rem;
 }
 
-/* This class is used to remove the bottom margin from whichever container its applied to to preserve spacing between containers */
+/* Removes the bottom border from a container (this is used on the 'Contact' section because I didn't want a bottom border there) */
 .no-border-bottom {
     border-bottom: 0;
+}
+
+/* Removes the bottom padding from a container (this is used on the 'Contact' section to reduce extra white space at the bottom of the page) */
+.no-padding-bottom {
     padding-bottom: 0;
 }
 
-// Removes the bottom margin from a container to preserve spacing (this is used in the last div containing the live/github links to a project)
+// Removes the bottom margin from a container to preserve spacing (this is used on the 'Skills' subheading and on the last div containing the live/github links to a project)
 .no-margin-bottom {
     margin-bottom: 0;
 }
@@ -42,15 +42,13 @@ body {
 
 .nav {
     background-color: @nav-bg;
+    -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999;
-}
-
-.nav-wrapper {
-    // margin: 0 auto;
-    // max-width: 60rem;
 }
 
 .nav ul {
@@ -69,18 +67,16 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     &:hover {
-        background-color: #dedede;
+        border-bottom: 1px solid @accent-color;
     }
     &:visited {
         color: @nav-txt;
     }
 }
 
-/* FOR ACTIVE CLASSES */
-.nav-link-active {
-    border-bottom: 1px solid @accent-color;
-    margin: 75px 15px 0 15px;
-    padding: 0 0 5px 0;
+.active {
+    color: @accent-color;
+    font-weight: 700;
 }
 
 .logo {
@@ -102,7 +98,6 @@ body {
     float: right;
     padding: 28px 20px;
     position: relative;
-    // user-select: none;
 }
 
 .navicon {
@@ -161,16 +156,11 @@ body {
 }
 
 .section-heading {
-    margin: 5rem 0 1rem 0;
+    margin: 3.5rem 0 1rem 0;
 }
 
 .section-subheading {
     margin-top: 2.5rem;
-}
-
-.section-sub-subheading {
-    // font-size: 1rem;
-    margin-top: 1.5rem;
 }
 
 /* TYPOGRAPHY */
@@ -184,12 +174,23 @@ body {
 /* BUTTONS */
 
 .btn {
-    background-color: @accent-color;
+    background-color: #000;
     border: 0;
+    border-radius: 26px;
+    color: white;
+    font-weight: 700;
     padding: 1rem;
+    -moz-transition: 0.15s ease all;
+    -o-transition: 0.15s ease all;
+    -webkit-transition: 0.15s ease all;
+    transition: 0.15s ease all;
     width: 7rem;
     &:hover {
         cursor: pointer;
+        background-color: @accent-color;
+    }
+    &:focus {
+        outline: none;
     }
 }
 
@@ -226,14 +227,55 @@ body {
 .skill-icon {
     display: block;
     font-size: 5rem;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.contact-icon {
+    color: #000;
+    -moz-transition: 0.15s ease all;
+    -o-transition: 0.15s ease all;
+    -webkit-transition: 0.15s ease all;
+    transition: 0.15s ease all;
+    &:hover {
+        color: @accent-color;
+    }
 }
 
 /* RESPONSIVENESS */
 
+@media only screen and (min-width: 375px) {
+    .skill-icon {
+        padding: 1rem 1rem;
+    }
+}
+
+@media only screen and (min-width: 414px) {
+    .skill-icon {
+        padding: 1rem 1.5rem;
+    }
+}
+
 @media only screen and (min-width: 600px) {
+    .main-container {
+        margin: 5rem auto 2rem auto;
+        width: 37rem;
+    }
+
+    .major-section {
+        margin-botton: 5rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .section-heading {
+        margin: 5rem 0 1rem 0;
+    }
     .nav-item {
         float: left;
+    }
+
+    .nav-link {
+        margin: 20px 15px 0 15px;
+        padding: 0 0 5px 0;
     }
 
     .nav-menu {
@@ -246,37 +288,20 @@ body {
         display: none;
     }
 
-    .main-container {
-        margin: 5rem auto 2rem auto;
-        width: 40rem;
+    .nav {
+        box-shadow: none;
     }
 
-    .nav-link {
-        // padding: 75px 15px;
+    .active {
         border-bottom: 1px solid @accent-color;
-        margin: 20px 15px 0 15px;
-        padding: 0 0 5px 0;
+        font-weight: 700;
     }
-
-    /*
-    .major-section {
-        padding-bottom: 5rem;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    */
 }
 
 // 35rem
 @media only screen and (min-width: 1081px) {
     .main-container {
-        // width: 40rem;
-        // margin: 11rem auto 0 auto
-        // float: right;
-        // margin: 9rem 0 2rem 0;
-        // 11rem
-        margin: 6rem 0 2rem 43.6%;
-        // width: 40rem;
-        // width: 51.2rem;
+        margin: 5rem 0 2rem 44.6%;
     }
 
     .nav {
@@ -287,22 +312,13 @@ body {
         background: none;
     }
 
-    .nav-item {
-      //  float: left;
-    }
-
     .nav-link {
-        // padding: 75px 15px;
-        // border-bottom: 1px solid @accent-color;
         margin: 75px 15px 0 15px;
         padding: 0 0 5px 0;
     }
 
     .nav-menu {
-      //  clear: none;
-        // float: right;
         float: left;
-        //max-height: none;
     }
 
     .menu-icon {
@@ -318,26 +334,12 @@ body {
     .tw-mobile-logo {
         display: none;
     }
-
-    /*
-    .section-heading {
-        margin: 5rem 0 1rem 0;
-    }
-    */
-
-    /*
-    .major-section {
-        padding-bottom: 5rem;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    */
 }
 
 @media only screen and (min-width: 1581px) {
     .main-container {
         float: none;
-        // 11rem
-        margin: 6rem auto 2rem auto;
+        margin: 5rem auto 2rem auto;
         width: 40rem;
     }
 }

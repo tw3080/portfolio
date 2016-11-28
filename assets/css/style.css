@@ -3,21 +3,23 @@ body {
 }
 /* STRUCTURE */
 .main-container {
-  margin-top: 5rem;
   margin: 5rem 0 2rem 0;
   text-align: center;
 }
 .major-section {
   border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 5rem;
-  padding-bottom: 5rem;
+  margin-bottom: 3.5rem;
+  padding-bottom: 3rem;
 }
 .portfolio-links-container {
   margin-bottom: 2.5rem;
 }
-/* This class is used to remove the bottom margin from whichever container its applied to to preserve spacing between containers */
+/* Removes the bottom border from a container (this is used on the 'Contact' section because I didn't want a bottom border there) */
 .no-border-bottom {
   border-bottom: 0;
+}
+/* Removes the bottom padding from a container (this is used on the 'Contact' section to reduce extra white space at the bottom of the page) */
+.no-padding-bottom {
   padding-bottom: 0;
 }
 .no-margin-bottom {
@@ -26,6 +28,9 @@ body {
 /* NAVIGATION */
 .nav {
   background-color: #fff;
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
@@ -47,16 +52,14 @@ body {
   text-transform: uppercase;
 }
 .nav-link:hover {
-  background-color: #dedede;
+  border-bottom: 1px solid #86AE9A;
 }
 .nav-link:visited {
   color: #000;
 }
-/* FOR ACTIVE CLASSES */
-.nav-link-active {
-  border-bottom: 1px solid #fbdb00;
-  margin: 75px 15px 0 15px;
-  padding: 0 0 5px 0;
+.active {
+  color: #86AE9A;
+  font-weight: 700;
 }
 .logo {
   display: block;
@@ -126,13 +129,10 @@ body {
   text-transform: uppercase;
 }
 .section-heading {
-  margin: 5rem 0 1rem 0;
+  margin: 3.5rem 0 1rem 0;
 }
 .section-subheading {
   margin-top: 2.5rem;
-}
-.section-sub-subheading {
-  margin-top: 1.5rem;
 }
 /* TYPOGRAPHY */
 .section-text {
@@ -142,13 +142,24 @@ body {
 }
 /* BUTTONS */
 .btn {
-  background-color: #fbdb00;
+  background-color: #000;
   border: 0;
+  border-radius: 26px;
+  color: white;
+  font-weight: 700;
   padding: 1rem;
+  -moz-transition: 0.15s ease all;
+  -o-transition: 0.15s ease all;
+  -webkit-transition: 0.15s ease all;
+  transition: 0.15s ease all;
   width: 7rem;
 }
 .btn:hover {
   cursor: pointer;
+  background-color: #86AE9A;
+}
+.btn:focus {
+  outline: none;
 }
 /* MEDIA */
 .tw-desktop-logo,
@@ -177,12 +188,47 @@ body {
 .skill-icon {
   display: block;
   font-size: 5rem;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
+}
+.contact-icon {
+  color: #000;
+  -moz-transition: 0.15s ease all;
+  -o-transition: 0.15s ease all;
+  -webkit-transition: 0.15s ease all;
+  transition: 0.15s ease all;
+}
+.contact-icon:hover {
+  color: #86AE9A;
 }
 /* RESPONSIVENESS */
+@media only screen and (min-width: 375px) {
+  .skill-icon {
+    padding: 1rem 1rem;
+  }
+}
+@media only screen and (min-width: 414px) {
+  .skill-icon {
+    padding: 1rem 1.5rem;
+  }
+}
 @media only screen and (min-width: 600px) {
+  .main-container {
+    margin: 5rem auto 2rem auto;
+    width: 37rem;
+  }
+  .major-section {
+    margin-botton: 5rem;
+    padding-bottom: 4.5rem;
+  }
+  .section-heading {
+    margin: 5rem 0 1rem 0;
+  }
   .nav-item {
     float: left;
+  }
+  .nav-link {
+    margin: 20px 15px 0 15px;
+    padding: 0 0 5px 0;
   }
   .nav-menu {
     clear: none;
@@ -192,25 +238,17 @@ body {
   .menu-icon {
     display: none;
   }
-  .main-container {
-    margin: 5rem auto 2rem auto;
-    width: 40rem;
+  .nav {
+    box-shadow: none;
   }
-  .nav-link {
-    border-bottom: 1px solid #fbdb00;
-    margin: 20px 15px 0 15px;
-    padding: 0 0 5px 0;
+  .active {
+    border-bottom: 1px solid #86AE9A;
+    font-weight: 700;
   }
-  /*
-    .major-section {
-        padding-bottom: 5rem;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    */
 }
 @media only screen and (min-width: 1081px) {
   .main-container {
-    margin: 6rem 0 2rem 43.6%;
+    margin: 5rem 0 2rem 44.6%;
   }
   .nav {
     background: none;
@@ -236,22 +274,11 @@ body {
   .tw-mobile-logo {
     display: none;
   }
-  /*
-    .section-heading {
-        margin: 5rem 0 1rem 0;
-    }
-    */
-  /*
-    .major-section {
-        padding-bottom: 5rem;
-        border-bottom: 1px solid #e0e0e0;
-    }
-    */
 }
 @media only screen and (min-width: 1581px) {
   .main-container {
     float: none;
-    margin: 6rem auto 2rem auto;
+    margin: 5rem auto 2rem auto;
     width: 40rem;
   }
 }
