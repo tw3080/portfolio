@@ -5,31 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Taylor Welling</title>
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css" />
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Devicons -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <!-- in your header -->
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="nav">
-        <div class="nav-wrapper">
-            <a href="#" class="tw-mobile-logo">Taylor Welling</a>
-            <a href="#"><img class="tw-desktop-logo" src="./assets/img/bw-logo.png" /></a>
-            <!-- <a href="#"><img class="tw-mobile-logo" src="./assets/img/tw-mobile-logo.png" /></a> -->
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="nav-menu">
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-            </ul>
-        </div>
+        <!-- Logos -->
+        <a href="#about-section" class="tw-mobile-logo">Taylor Welling</a>
+        <a href="#about-section"><img class="tw-desktop-logo" src="./assets/img/bw-logo.png" /></a>
+        <!-- Mobile nav button -->
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <!-- Nav links -->
+        <ul class="nav-menu">
+            <li class="nav-item"><a class="nav-link active" href="#about-section">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio-section">Portfolio</a></li>
+            <li class="nav-item"><a id="contact-link" class="nav-link" href="#contact-section">Contact</a></li>
+        </ul>
     </nav>
+    <!-- Main content -->
     <div class="main-container">
-        <section class="major-section">
+        <!-- 'About' section -->
+        <section id="about-section" class="major-section anchor-offset">
             <h1 class="section-heading">About</h1>
             <div class="half-width">
                 <img class="tw-portrait" src="./assets/img/tw-portrait.jpg" />
@@ -38,58 +44,51 @@
                 <p class="section-text">
                     Hi, I’m Taylor, and I’m a web designer and front-end developer based in the Seattle, WA area. I believe design and development are equally important in creating excellent user experiences, and I’m passionate about combining my skills in both areas by delivering content which is aesthetically pleasing, functional, and cleanly coded.
                 </p>
-                <h2 class="section-subheading">Skills</h2>
-                <p class="section-text">
-                    <h3 class="section-sub-subheading">Front-end Development</h3>
-                    <div class="skill-icon-container">
-                        <i class="devicon-html5-plain colored skill-icon"></i>
-                        HTML5
-                    </div>
-                    <div class="skill-icon-container">
-                        <i class="devicon-css3-plain colored skill-icon"></i>
-                        CSS3
-                    </div>
-                    <div class="skill-icon-container">
-                        <i class="devicon-less-plain-wordmark colored skill-icon"></i>
-                        LESS
-                    </div>
-                    <div class="skill-icon-container">
-                        <i class="devicon-javascript-plain colored skill-icon"></i>
-                        JavaScript
-                    </div>
-                    <div class="skill-icon-container">
-                        <i class="devicon-angularjs-plain colored skill-icon"></i>
-                        AngularJS
-                    </div>
-                    <div class="skill-icon-container">
-                        <i class="devicon-jquery-plain colored skill-icon"></i>
-                        jQuery
-                    </div>
-                    <section>
-                        <p class="section-text">
-                            I design and develop fully responsive, interactive websites and pride myself on using empathy to understand projects from the user's perspective.
-                            In my workflow, I use build tools such as NPM and Gulp to speed up development, and I'm comfortable with Git/Github.
-                            I'm also familiar with Node.js, Express, MongoDB, which allows me to work closely with back-end developers.
-                        </p>
-                    </section>
-                    <h3 class="section-sub-subheading">Design</h3>
-                    <div class="skill-icon-container">
-                        <i class="devicon-photoshop-plain colored skill-icon"></i>
-                        Photoshop
-                    </div>
-                    <div class="skill-icon-container">
-                        <i class="devicon-illustrator-plain colored skill-icon"></i>
-                        Illustrator
-                    </div>
-                    <section>
-                        <p class="section-text">
-
-                        </p>
-                    </section>
-                </p>
+                <h2 class="section-subheading no-margin-bottom">Skills</h2>
+                <div class="skill-icon-container">
+                    <i class="devicon-html5-plain colored skill-icon"></i>
+                    HTML5
+                </div>
+                <div class="skill-icon-container">
+                    <i class="devicon-css3-plain colored skill-icon"></i>
+                    CSS3
+                </div>
+                <div class="skill-icon-container">
+                    <i class="devicon-less-plain-wordmark colored skill-icon"></i>
+                    LESS
+                </div>
+                <div class="skill-icon-container">
+                    <i class="devicon-javascript-plain colored skill-icon"></i>
+                    JavaScript
+                </div>
+                <div class="skill-icon-container">
+                    <i class="devicon-angularjs-plain colored skill-icon"></i>
+                    AngularJS
+                </div>
+                <div class="skill-icon-container">
+                    <i class="devicon-jquery-plain colored skill-icon"></i>
+                    jQuery
+                </div>
+                <div class="skill-icon-container">
+                    <i class="devicon-photoshop-plain colored skill-icon"></i>
+                    Photoshop
+                </div>
+                <div class="skill-icon-container">
+                    <i class="devicon-illustrator-plain colored skill-icon"></i>
+                    Illustrator
+                </div>
+                <section>
+                    <p class="section-text">
+                        I design and develop fully responsive, easy-to-use websites, and I pride myself on using empathy to always strive to understand projects from the user's perspective. I enjoy creating pixel-perfect layouts and writing elegant code.
+                    </p>
+                    <p class="section-text">
+                        In my workflow, I use build tools such as NPM and Gulp to speed up development, and I'm comfortable with Git/Github. I'm also familiar with Node.js, Express, and MongoDB, which allows me to work closely with back-end developers.
+                    </p>
+                </section>
             </div>
         </section>
-        <section class="major-section">
+        <!-- 'Portfolio' section -->
+        <section id="portfolio-section" class="major-section">
             <h1 class="section-heading">Portfolio</h1>
             <section>
                 <img class="portfolio-thumbnail" src="./assets/img/poke-mongo-screenshot.png" />
@@ -125,20 +124,26 @@
                 </p>
             </section>
         </section>
-        <section class="major-section no-border-bottom">
+        <!-- 'Contact' section -->
+        <section id="contact-section" class="major-section no-border-bottom no-padding-bottom no-margin-bottom">
             <h1 class="section-heading">Contact</h1>
             <p class="section-text">
                 I'd love the opportunity to create something with you! If you're interested in working together or seeing my r&eacute;sum&eacute;, please feel free to reach out to me through social media or email:
             </p>
             <div class="contact-links-container">
-                <a href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
+                <a class="contact-icon" href="https://www.linkedin.com/in/taylor-welling-44ab63109"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                <a class="contact-icon" href="https://github.com/tw3080"><i class="fa fa-github-square fa-3x" aria-hidden="true"></i></a>
             </div>
             <div class="contact-links-container">
                 tayrwelling [at] gmail [dot] com
             </div>
         </section>
     </div>
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.1.js"></script>
+    <!-- jQueryUI -->
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
