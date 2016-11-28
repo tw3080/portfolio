@@ -51,9 +51,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-.nav-link:hover {
-  border-bottom: 1px solid #86AE9A;
-}
 .nav-link:visited {
   color: #000;
 }
@@ -235,6 +232,9 @@ body {
   .nav-link {
     margin: 20px 15px 0 15px;
     padding: 0 0 5px 0;
+  }
+  .nav-link:hover {
+    border-bottom: 1px solid #86AE9A;
   }
   .nav-menu {
     clear: none;
