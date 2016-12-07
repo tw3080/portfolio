@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 /* STRUCTURE */
 .main-container {
@@ -119,9 +119,14 @@ body {
   top: 0;
 }
 /* HEADINGS */
+h1 {
+  font-size: 2.618rem;
+}
+h2 {
+  font-size: 1.618rem;
+}
 .section-heading,
-.section-subheading,
-.section-sub-subheading {
+.section-subheading {
   text-transform: uppercase;
 }
 .section-heading {
@@ -133,7 +138,7 @@ body {
 /* TYPOGRAPHY */
 .section-text {
   line-height: 1.4;
-  margin: 1rem 0.5rem;
+  margin: 1rem 1rem;
   text-align: justify;
 }
 /* BUTTONS */
