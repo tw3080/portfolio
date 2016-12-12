@@ -3,7 +3,7 @@ body {
 }
 /* STRUCTURE */
 .main-container {
-  margin: 5rem 0 2rem 0;
+  margin: 5rem 1rem 2rem 1rem;
   text-align: center;
 }
 .major-section {
@@ -28,18 +28,20 @@ body {
 /* NAVIGATION */
 .nav {
   background-color: #fff;
-  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
 }
+.js-nav-shadow {
+  -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
 .nav ul {
   background-color: #fff;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   overflow: hidden;
   padding: 0;
 }
@@ -137,9 +139,8 @@ h2 {
 }
 /* TYPOGRAPHY */
 .section-text {
-  line-height: 1.4;
-  margin: 1rem 1rem;
-  text-align: justify;
+  line-height: 1.5;
+  text-align: left;
 }
 /* BUTTONS */
 .btn {
@@ -178,6 +179,9 @@ h2 {
   text-decoration: none;
   text-transform: uppercase;
 }
+.tw-portrait {
+  border-radius: 50%;
+}
 .tw-portrait,
 .portfolio-thumbnail {
   width: 100%;
@@ -212,10 +216,10 @@ h2 {
     padding: 1rem 1.5rem;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 672px) {
   .main-container {
     margin: 5rem auto 2rem auto;
-    width: 37rem;
+    width: 40rem;
   }
   .major-section {
     margin-bottom: 5rem;
@@ -248,30 +252,20 @@ h2 {
   .menu-icon {
     display: none;
   }
-  .nav {
-    box-shadow: none;
-  }
   .active {
     border-bottom: 1px solid #86AE9A;
     font-weight: 700;
   }
 }
 @media only screen and (min-width: 1081px) {
-  .main-container {
-    margin: 5rem 0 2rem 44.6%;
-  }
-  .nav {
-    background: none;
-  }
-  .nav ul {
-    background: none;
-  }
   .nav-link {
-    margin: 75px 15px 0 15px;
-    padding: 0 0 5px 0;
+    margin: 1.618rem 0.809rem 1.236rem 0.809rem;
+    padding: 0 0 0.382rem;
   }
   .nav-menu {
-    float: left;
+    float: none;
+    margin: 0 auto;
+    width: 19.5rem;
   }
   .menu-icon {
     display: none;
@@ -289,6 +283,5 @@ h2 {
   .main-container {
     float: none;
     margin: 5rem auto 2rem auto;
-    width: 40rem;
   }
 }
