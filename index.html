@@ -19,35 +19,34 @@
 <body>
     <!-- Navigation -->
     <nav class="nav">
-        <!-- Logos -->
-        <a href="#about-section" class="tw-mobile-logo">Taylor Welling</a>
-        <a href="#about-section"><img class="tw-desktop-logo" src="./assets/img/bw-logo.png" /></a>
-        <!-- Mobile nav button -->
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <!-- Nav links -->
-        <ul class="nav-menu">
-            <li class="nav-item"><a class="nav-link active" href="#about-section">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio-section">Portfolio</a></li>
-            <li class="nav-item"><a id="contact-link" class="nav-link" href="#contact-section">Contact</a></li>
-        </ul>
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <a href="#about-section"><img class="tw-logo" src="./assets/img/bw-logo-xsmall.png" /></a>
+            <!-- Mobile nav button -->
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <!-- Nav links -->
+            <ul class="nav-menu">
+                <li class="nav-item"><a class="nav-link active" href="#about-section">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio-section">Portfolio</a></li>
+                <li class="nav-item"><a id="contact-link" class="nav-link" href="#contact-section">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <!-- Main content -->
     <div class="main-container">
         <!-- 'About' section -->
         <section id="about-section" class="major-section anchor-offset">
             <h1 class="section-heading">About</h1>
-            <div class="half-width">
-                <img class="tw-portrait" src="./assets/img/tw-portrait.jpg" />
-            </div>
-            <div class="half-width">
-                <p class="section-text">
-                    Hi, I’m Taylor, and I'm a front-end web developer and designer based in the Seattle, WA area. I believe design and development are equally important in creating excellent user experiences, and I’m passionate about combining my skills in both areas by delivering content which is aesthetically pleasing, functional, and cleanly coded.
-                    <div class="portfolio-links-container">
-                        <a href="assets/tw_resume_dec16.pdf" target="_blank"><button class="btn">View Resume</button></a>
-                    </div>
-                </p>
-                <h2 class="section-subheading no-margin-bottom">Skills</h2>
+            <p class="section-text">
+                <img class="tw-portrait" src="./assets/img/tw-portrait-square.jpg" />
+                Hi, I’m Taylor, and I'm a front-end web developer and designer based in the Seattle, WA area. I believe design and development are equally important in creating excellent user experiences, and I’m passionate about combining my skills in both areas by delivering content which is aesthetically pleasing, functional, and cleanly coded.
+                <div class="portfolio-links-container">
+                    <a href="assets/tw_resume_dec16.pdf" target="_blank"><button class="btn">View Resume</button></a>
+                </div>
+            </p>
+            <h2 class="section-subheading">Skills</h2>
+            <div>
                 <div class="skill-icon-container">
                     <i class="devicon-html5-plain colored skill-icon"></i>
                     HTML5
@@ -64,6 +63,8 @@
                     <i class="devicon-javascript-plain colored skill-icon"></i>
                     JavaScript
                 </div>
+            </div>
+            <div>
                 <div class="skill-icon-container">
                     <i class="devicon-angularjs-plain colored skill-icon"></i>
                     AngularJS
@@ -80,21 +81,21 @@
                     <i class="devicon-illustrator-plain colored skill-icon"></i>
                     Illustrator
                 </div>
-                <section>
-                    <p class="section-text">
-                        I design and develop fully responsive, easy-to-use websites, and I pride myself on using empathy to always strive to understand projects from the user's perspective. I enjoy creating pixel-perfect layouts and writing elegant code.
-                    </p>
-                    <p class="section-text">
-                        In my workflow, I use build tools such as NPM and Gulp to speed up development, and I'm comfortable with Git/Github. I'm also familiar with Node.js, Express, and MongoDB, which allows me to work closely with back-end developers.
-                    </p>
-                </section>
             </div>
+            <section>
+                <p class="section-text">
+                    I design and develop fully responsive, easy-to-use websites, and I pride myself on using empathy to always strive to understand projects from the user's perspective. I enjoy creating pixel-perfect layouts and writing elegant code.
+                </p>
+                <p class="section-text no-margin-bottom">
+                    In my workflow, I use build tools such as NPM and Gulp to speed up development, and I'm comfortable with Git/Github. I'm also familiar with Node.js, Express, and MongoDB, which allows me to work closely with back-end developers.
+                </p>
+            </section>
         </section>
         <!-- 'Portfolio' section -->
         <section id="portfolio-section" class="major-section">
             <h1 class="section-heading">Portfolio</h1>
             <section>
-                <img class="portfolio-thumbnail" src="./assets/img/poke-mongo-screenshot.png" />
+                <img class="portfolio-thumbnail" src="./assets/img/poke-mongo-screenshot-small.png" />
                 <h2 class="section-subheading">Pok&eacute; Mongo</h2>
                 <p class="section-text">
                     Full-stack app which allows users to view and manage their Pok&eacute;mon card collections online. Developed with HTML5, CSS3/LESS, JavaScript (ES6), AngularJS, Node.js, Express, and MongoDB.
@@ -105,7 +106,7 @@
                 </p>
             </section>
             <section>
-                <img class="portfolio-thumbnail" src="./assets/img/weather-mood-screenshot.png" />
+                <img class="portfolio-thumbnail" src="./assets/img/weather-mood-screenshot-small.png" />
                 <h2 class="section-subheading">Weather Mood</h2>
                 <p class="section-text">
                     Weather app with changing styles and relaxing white noise sounds based on weather conditions. Developed with HTML5, CSS3/LESS, JavaScript, and AngularJS.
@@ -116,7 +117,7 @@
                 </p>
             </section>
             <section>
-                <img class="portfolio-thumbnail" src="./assets/img/mappr-screenshot.png" />
+                <img class="portfolio-thumbnail" src="./assets/img/mappr-screenshot-small.png" />
                 <h2 class="section-subheading">Mappr</h2>
                 <p class="section-text">
                     Integrates the Google Maps API and Flickr API to generate a gallery and map of Flickr photos based on location. Developed with HTML5, CSS3/LESS, Javascript, and jQuery.
