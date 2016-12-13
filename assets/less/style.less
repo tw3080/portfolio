@@ -9,45 +9,29 @@ body {
 /* STRUCTURE */
 
 .main-container {
-    // margin: 5rem 0 2rem 0;
-    margin: 5rem 1rem 2rem 1rem;
+    margin: 5rem 0 2rem 0;
     text-align: center;
 }
 
 .major-section {
     border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 3.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
 }
 
 .portfolio-links-container {
     margin-bottom: 2.5rem;
 }
 
-/* Removes the bottom border from a container (this is used on the 'Contact' section because I didn't want a bottom border there) */
-.no-border-bottom {
-    border-bottom: 0;
-}
-
-/* Removes the bottom padding from a container (this is used on the 'Contact' section to reduce extra white space at the bottom of the page) */
-.no-padding-bottom {
-    padding-bottom: 0;
-}
-
-// Removes the bottom margin from a container to preserve spacing (this is used on the 'Skills' subheading and on the last div containing the live/github links to a project)
-.no-margin-bottom {
-    margin-bottom: 0;
-}
-
 /* NAVIGATION */
 
 .nav {
     background-color: @nav-bg;
-    // -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-    // -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-    // box-shadow: 0 1px 10px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
     width: 100%;
     z-index: 9999;
 }
@@ -99,7 +83,7 @@ body {
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 28px 20px;
+    padding: 2.15rem 1.6rem;
     position: relative;
 }
 
@@ -166,18 +150,18 @@ h2 {
 }
 
 .section-heading {
-    margin: 3.5rem 0 1rem 0;
+    margin: 4rem 0 2rem 0;
 }
 
 .section-subheading {
-    margin-top: 2.5rem;
+    margin: 2.5rem 0 0 0;
 }
 
 /* TYPOGRAPHY */
 
 .section-text {
     line-height: 1.5;
-    // margin: 1rem 1rem;
+    margin: 1rem 1rem;
     text-align: left;
 }
 
@@ -206,6 +190,10 @@ h2 {
 
 /* MEDIA */
 
+.tw-logo {
+    margin: 8px 0 0 8px;
+}
+
 .tw-desktop-logo,
 .tw-mobile-logo {
     float: left;
@@ -226,11 +214,17 @@ h2 {
 
 .tw-portrait {
     border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 75%;
 }
 
-.tw-portrait,
 .portfolio-thumbnail {
     width: 100%;
+}
+
+.skill-container {
+
 }
 
 .skill-icon-container {
@@ -240,7 +234,7 @@ h2 {
 
 .skill-icon {
     display: block;
-    font-size: 5rem;
+    font-size: 3rem;
     padding: 1rem 0.5rem;
 }
 
@@ -253,6 +247,23 @@ h2 {
     &:hover {
         color: @accent-color;
     }
+}
+
+/* UTILITY CLASSES */
+
+/* Removes the bottom border from a container */
+.no-border-bottom {
+    border-bottom: 0;
+}
+
+/* Removes the bottom padding from a container */
+.no-padding-bottom {
+    padding-bottom: 0;
+}
+
+/* Removes the bottom margin from a container */
+.no-margin-bottom {
+    margin-bottom: 0;
 }
 
 /* RESPONSIVENESS */
@@ -275,21 +286,37 @@ h2 {
         width: 40rem;
     }
 
+    .portfolio-links-container {
+        margin-bottom: 4rem;
+    }
+
+    .nav-wrapper {
+        margin: 0 auto;
+        width: 40rem;
+    }
+
     .major-section {
-        margin-bottom: 5rem;
-        padding-bottom: 4.5rem;
+        padding-bottom: 8rem;
     }
 
     .no-padding-bottom {
         padding-bottom: 0;
     }
 
-    .no-margin-bottom {
-        margin-bottom: 0;
+    .section-heading {
+        margin: 8rem 0 4rem 0;
     }
 
-    .section-heading {
-        margin: 5rem 0 1rem 0;
+    .section-subheading {
+        margin: 4rem 0 0 0;
+    }
+
+    .section-text {
+        margin: 2rem 0;
+    }
+
+    .no-margin-bottom {
+        margin-bottom: 0;
     }
 
     .nav-item {
@@ -297,8 +324,8 @@ h2 {
     }
 
     .nav-link {
-        margin: 20px 15px 0 15px;
-        padding: 0 0 5px 0;
+        margin: 1.618rem 0.809rem 1.236rem 0.809rem;
+        padding: 0 0 0.382rem;
         &:hover {
             border-bottom: 1px solid @accent-color;
         }
@@ -314,64 +341,16 @@ h2 {
         display: none;
     }
 
-    .nav {
-        // box-shadow: none;
+    .tw-portrait {
+        margin: 0 auto 2rem auto;
+    }
+
+    .tw-logo {
+        float: left;
     }
 
     .active {
         border-bottom: 1px solid @accent-color;
         font-weight: 700;
-    }
-}
-
-// 35rem
-@media only screen and (min-width: 1081px) {
-    .main-container {
-        // margin: 5rem 0 2rem 44.6%;
-    }
-
-    .nav {
-        // background: none;
-    }
-
-    .nav ul {
-        // background: none;
-    }
-
-    .nav-link {
-        // margin: 75px 15px 0 15px;
-        // margin: 1.618rem 0.809rem 0 0.809rem;
-        margin: 1.618rem 0.809rem 1.236rem 0.809rem;
-        // padding: 0 0 5px 0;
-        padding: 0 0 0.382rem;
-    }
-
-    .nav-menu {
-        // float: left;
-        float: none;
-        margin: 0 auto;
-        width: 19.5rem;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    .tw-desktop-logo {
-        display: block;
-        padding: 20px;
-        width: 8rem;
-    }
-
-    .tw-mobile-logo {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 1581px) {
-    .main-container {
-        float: none;
-        margin: 5rem auto 2rem auto;
-        // width: 40rem;
     }
 }
